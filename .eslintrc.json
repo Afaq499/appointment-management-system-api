@@ -1,0 +1,22 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "selector-list-comma-newline-after": "never-multi-line",
+    "eslint-disable-next-line": "func-names",
+    "no-console": 0,
+    "no-empty": 0,
+    "no-irregular-whitespace": 0
+  }
+}
