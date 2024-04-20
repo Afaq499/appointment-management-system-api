@@ -12,15 +12,22 @@ router.post('/', async (req, res) => {
   try {
     const {
       user: {
-        id
+        id: userId,
+        phone: to
       },
       body: {
-        to
+        appointmentDate,
+        category,
       }
     } = req;
 
-    const { users, count } = await CreateAppointment({ to });
-    res.status(200).json({ users, count });
+    const { message } = await CreateAppointment({
+      to,
+      appointmentDate,
+      category,
+      userId
+    });
+    res.status(200).json({ message });
   } catch (err) {
     await catchResponse({
       res,

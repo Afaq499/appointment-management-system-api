@@ -1,1 +1,2 @@
+import './appointment';
 import './user';
